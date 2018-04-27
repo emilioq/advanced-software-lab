@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BP | SGHT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="site.css">
+        
+        <style>
+            
+            @font-face{
+                font-family: 'myFont';
+                src: url('fonts/tommys.ttf');
+            }
+            
+            @font-face{
+                font-family: 'bpdots';
+                src: url('fonts/BPdots.otf');
+            }
+            
+            font.title {
+                font-family: 'myFont';
+                opacity: .6;
+            }  
+            
+            p.para {
+                font-family: 'bpdots';
+                opacity: .85;
+                color: #ffffff;
+                font-size: 12px;
+            }  
+        </style>
+    </head>
+    <body bgcolor="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#a1").fadeIn(1000);
+                $("#a2").fadeIn(2000);
+                $("#a3").fadeIn(3000);
+                $("#a4").fadeIn(3500);
+                $("#a5").fadeIn(4000);
+                
+            $("#title").click(function(){
+                   window.location.href="index.html";
+            });
+            
+            $("#title").mouseenter(function(){
+                $("#title").animate({
+                        opacity: '.85',
+                        fontSize: '+=3'
+                    });
+                });
+            
+            $("#title").mouseleave(function(){
+                $("#title").animate({
+                        opacity: '.6',
+                        fontSize: '-=3'
+                    });
+                });
+            });
+           
+        </script>
+        
+        <div  style="text-align: center;"><font id="title" class="title" color="#ffffff" size=24>bad parties</font></div>
+        <div>
+            <div id="a1" style="text-align: center; display:none;">
+                <img src="art/3.jpg" style="padding-top: 3em; padding-bottom: 3em; padding-right: 5em">
+                <img src="art/4.jpg" style="padding-top: 3em; padding-bottom: 3em;">
+            </div>
+            
+            <div id="a2" style="text-align: center; display:none;">
+                <img src="art/1.jpg" style="padding-top: 3em; padding-bottom: 3em; padding-right: 5em">
+                <img src="art/2.jpg" style="padding-top: 3em; padding-bottom: 3em;">
+            </div>
+            
+            <div id="a3" style="text-align: center; display:none;">
+                <img src="art/5.jpg" style="padding-top: 3em; padding-bottom: 3em; padding-right: 5em">
+                <img src="art/6.jpg" style="padding-top: 3em; padding-bottom: 3em;">
+            </div>
+            
+            <div id="a4" style="text-align: center; display:none;">
+                <img src="art/7.jpg" style="padding-top: 3em; padding-bottom: 3em; padding-right: 5em">
+                <img src="art/8.jpg" style="padding-top: 3em; padding-bottom: 3em;">
+            </div>
+            
+            <div id="a5" style="text-align: center; display:none;">
+                <img src="art/9.jpg" style="padding-top: 3em; padding-bottom: 3em; padding-right: 5em">
+                <img src="art/10.jpg" style="padding-top: 3em; padding-bottom: 3em;">
+            </div>
+            
+        </div>
+    </body>
+</html>

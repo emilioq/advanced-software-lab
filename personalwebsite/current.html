@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BP | SND</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+        <style>
+            
+            @font-face{
+                font-family: 'myFont';
+                src: url('fonts/tommys.ttf');
+            }
+            
+            @font-face{
+                font-family: 'bpdots';
+                src: url('fonts/BPdots.otf');
+            }
+            
+            font.title {
+                font-family: 'myFont';
+                opacity: .6;
+            }  
+            
+            p.para {
+                font-family: 'bpdots';
+                opacity: .85;
+                color: #ffffff;
+                font-size: 12px;
+            }  
+        </style>
+    </head>
+    <body bgcolor="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){              
+                $("#player").load(function(){
+                    $("#s1").slideDown(1000);
+                    $("#s2").slideDown(1700);
+                    $("#s3").slideDown(2500);
+                });
+                
+                //$("#s1").fadeIn(3000);
+                //$("#s2").fadeIn(4000);
+                //$("#s3").fadeIn(4500);
+                 
+                $("#title").click(function(){
+                   window.location.href="index.html";
+                });
+            
+            $("#title").mouseenter(function(){
+                $("#title").animate({
+                        opacity: '.85',
+                        fontSize: '+=3'
+                    });
+                });
+            
+            $("#title").mouseleave(function(){
+                $("#title").animate({
+                        opacity: '.6',
+                        fontSize: '-=3'
+                    });
+                });
+            });
+           
+        </script>
+        
+        <div style='text-align: center'> <font id="title" class="title" color="#ffffff" size=24 >bad parties</font></div>
+        
+        <div>            
+            <div id="s1" style='text-align: center; padding-bottom: 3em; display:none; padding-top: 3em'>
+                <iframe width="50%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/179232537&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true;"></iframe> <br>
+            </div>
+            
+            <div id="s2" style='text-align: center; padding-bottom: 3em; display:none;'>  
+                <iframe width="50%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/187264330&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe> 
+            </div>    
+            
+            <div id="s3" style='text-align: center; padding-bottom: 3em; display:none;'> 
+                <iframe id="player" width="50%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/200244762&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            </div>  
+            
+        </div>
+    </body>
+</html>

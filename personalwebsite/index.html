@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            /*
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }  
+            
+                        
+            a {
+                display: block;
+                width: 60px;
+                background-color: #dddddd;
+            }
+            
+              
+            a {
+                display: block;
+                width: 60px;
+                background-color: #476B6B;
+            }
+            
+            a.def {
+                display: block;
+                width: 60px;
+                background-color: #000000;
+            }
+            
+            a.yellow {
+                background-color: #ffcc33;
+            }
+            
+            */
+            
+            img.displayedSight {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: .5;
+            }
+            
+            img.displayedHome {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: .5;
+            }
+            
+            img.displayedSound {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: .5;
+            }
+            
+            @font-face{
+                font-family: 'myFont';
+                src: url('fonts/tommys.ttf');
+            }
+            
+            
+            @font-face{
+                font-family: 'myFont2';
+                src: url('fonts/neurochrome.ttf')
+            }
+            
+            
+            @font-face{
+                font-family: 'myFont3';
+                src: url('fonts/Beccaria.ttf')
+            }
+            
+            font.title {
+                font-family: 'myFont';
+                opacity: .6;
+        
+            }
+            
+            p.sub {
+                font-family: 'myFont2';
+                opacity: 0;
+                font-size: 22px;
+                //margin-left: auto;
+                //margin-right:auto;
+                text-align: right;
+                color: #ffffff;
+                padding-left: .5em;
+            }
+            
+            p.sub2 {
+                font-family: 'myFont3';
+                opacity: 0;
+                font-size: 20px;
+                color:#ffffff;   
+            }
+            
+            td {
+                padding-left: .5em;
+            }
+            
+            
+       
+            
+        </style>
+        
+        
+        <title>
+            BP
+        </title>
+        <link rel="stylesheet" type="text/css" href="site.css" >
+    </head>
+    
+    <body bgcolor="#000000" link="black">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#title").click(function(){
+                   window.location.href="index.html";
+               });
+            
+            $("#title").mouseenter(function(){
+                $("#title").animate({
+                        opacity: '.85',
+                        fontSize: '+=3'
+                    });
+                });
+            
+            $("#title").mouseleave(function(){
+                $("#title").animate({
+                        opacity: '.6',
+                        fontSize: '-=3'
+                    });
+                });
+            });
+           
+        </script>
+        
+        <div><font id="title" class="title" color="#ffffff" size=24 >bad parties</font></div>
+        
+        <!-- <div><font color="#360000" size = 24>bad parties</font></div>
+        
+        <div><font color="1F0000" size = 24>bad parties</font></div> 
+        
+        <img src="imgs/bg2.jpg" alt = "hi" style="width:205px;"> -->
+        
+        <!-- <button onclick="navColor()">hi</button> -->
+        
+        <script> 
+        function navColor() {
+            var x = document.getElementsByClassName("def");
+            x[0].className = "yellow";  
+        }
+        </script>
+        
+        <div>
+            <ul>
+                <!-- <li><a class = "def" href="about.html"> about</a></li>
+                <li><a class = "def" href="current.html"> sound</a></li>
+                <li><a class = "def" href="current2.html"> sight</a></li>
+                <li><a class = "def" href="msg.html"> message</a></li> -->
+            </ul>
+        </div><br>
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#i1").fadeIn(1000);
+                $("#i2").fadeIn(2000);
+                $("#i3").fadeIn(3000);
+                
+                $("#abt").animate({
+                        opacity: '.45'                  
+                    },2500);
+                
+                $('.displayedSight').hover(function(){
+                    $("#hoversound1").get(0).play();
+                }, function(){
+                    $("#hoversound1").load();
+                });
+                
+                $('.displayedHome').hover(function(){
+                    $("#hoversound2").get(0).play();
+                }, function(){
+                    $("#hoversound2").load();
+                });
+                
+                $('.displayedSound').hover(function(){
+                    $("#hoversound3").get(0).play();
+                }, function(){
+                    $("#hoversound3").load();
+                });
+                
+                ////ANIMATIONS
+                
+                $('.displayedSight').mouseover(function(){
+                $("#sub1").animate({
+                        opacity: '.6'                  
+                    },750);
+                $("#abt").animate({
+                        opacity: '0'                  
+                    },150);
+                $('.displayedSight').animate({
+                        width: '200px',
+                        opacity: '.9',
+                        height: '+=50'
+                    },"fast");
+                });
+                
+                $('.displayedSight').mouseleave(function(){
+                $("#sub1").animate({
+                        opacity: '0'                      
+                    },200);
+                $("#abt").animate({
+                        opacity: '.45'                  
+                    },300);
+                $('.displayedSight').animate({
+                        width: '10px',
+                        opacity: '.5',
+                        height: '150px'
+                    },"fast");
+                });
+                
+                
+                
+                $('.displayedHome').mouseover(function(){
+                $("#sub2").animate({
+                        opacity: '.6'                  
+                },750);
+                $('.displayedHome').animate({
+                        width: '250px',
+                        opacity: '.9',
+                        height: '+=100'
+                    },"fast");
+                });
+                
+                $('.displayedHome').mouseleave(function(){
+                $("#sub2").animate({
+                        opacity: '0'                  
+                },200);
+                $('.displayedHome').animate({
+                        width: '10px',
+                        opacity: '.5',
+                        height: '150px'
+                    },"fast");
+                });
+                
+                
+                
+                $('.displayedSound').mouseover(function(){
+                $("#sub3").animate({
+                        opacity: '.6'                  
+                    },750);
+                $("#abt").animate({
+                        opacity: '0'                  
+                    },150);
+                $('.displayedSound').animate({
+                        width: '200px',
+                        opacity: '.9',
+                        height: '+=50'
+                    },"fast");
+                });
+                
+                $('.displayedSound').mouseleave(function(){
+                $("#sub3").animate({
+                        opacity: '0'                  
+                    },200);
+                $("#abt").animate({
+                        opacity: '.45'                  
+                    },300);    
+                $('.displayedSound').animate({
+                        width: '10px',
+                        opacity: '.5',
+                        height: '150px'
+                    },"fast");
+                });
+                
+                //LINKS
+                
+                /*
+                $("#i1").wrap($('<a>',{
+                    href: 'current2.html'
+                }));
+                $("#i2").wrap($('<a>',{
+                    href: 'about.html'
+                }));
+                $("#i3").wrap($('<a>',{
+                    href: 'current.html'
+                }));
+                */
+               
+               $("#i1").click(function(){
+                   window.location.href="current2.html";
+               });
+               
+               $("#i2").click(function(){
+                   window.location.href="about.html";
+               });
+               
+               $("#i3").click(function(){
+                   window.location.href="current.html";
+               });
+                
+                
+        });
+
+        </script>
+        
+            <table align="center">
+                <tr>
+                    <td>
+                    </td>
+                    
+                    <td>
+                    <img id="i1" src="imgs/2.jpg" class = "displayedSight" alt = "sight" style="width:10px;height:150px;display:none;">
+                    </td>
+                    
+                    <td>
+                    <p id="sub1" class="sub">sight</p> 
+                    </td>
+                    
+                </tr>
+                
+                <tr></tr>
+             
+
+                <tr>
+                    <td>
+                    <p id="abt" class="sub2">*</p> 
+                    </td>
+                    
+                    <td>
+                    <img id="i2" src="imgs/3.jpg" class = "displayedHome" alt = "about"  style="width:10px;height:150px;display:none;"> 
+                    </td>
+                    
+                    <td>
+                    <p id="sub2" class="sub">about</p> 
+                    </td>
+                </tr>
+                
+                <tr></tr>
+ 
+                <tr>
+                    <td>
+                    </td>
+                    
+                    <td>
+                    <img id="i3" src="imgs/1.jpg" class = "displayedSound" alt = "sound" style="width:10px;height:150px;display:none;">
+                    </td>
+                    
+                    <td>
+                    <p id="sub3" class="sub">sound</p> 
+                    </td>
+                </tr>
+            </table>  
+ 
+        
+        <audio id="hoversound1">
+            <source src="sounds/hover1.ogg" type="audio/ogg">
+            <source src="sounds/hover1.wav" type="audio/wav">
+            <source src="sounds/hover1.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="hoversound2">
+            <source src="sounds/hover2.ogg" type="audio/ogg">
+            <source src="sounds/hover2.wav" type="audio/wav">
+            <source src="sounds/hover2.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="hoversound3">
+            <source src="sounds/hover3.ogg" type="audio/ogg">
+            <source src="sounds/hover3.wav" type="audio/wav">
+            <source src="sounds/hover3.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>
