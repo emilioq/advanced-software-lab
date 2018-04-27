@@ -1,8 +1,10 @@
 # personal-website  
 
-This was a course project from "Advanced Software Lab" in Fall 2015  
+This was a course project from "Advanced Software Lab" in Fall 2015.  
   
-The following are lab assignments done in each week  
+I created a personal web page utilizing jQuery functions and animations to display personal works.  
+
+The following are lab assignments done in each week:  
   
 1 - UNIX Basics  
 2 - IDEs and Text Editors  
