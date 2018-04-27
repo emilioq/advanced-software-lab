@@ -1,6 +1,6 @@
 # personal-website  
 
-This was a course project from "Advanced Software Lab" in Fall 2015.  
+This was a course project from an Advanced Software Lab in Fall 2015.  
   
 I created a personal web page utilizing jQuery functions and animations to display personal works.  
 
